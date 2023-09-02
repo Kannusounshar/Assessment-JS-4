@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript assessment</title>
+  </head>
+  <body>
+    <script>
+      // // 1. Question: Create a map to store the prices of items and their corresponding names. Add items and their prices, then retrieve the price of a specific item.
+
+      // // Expected Output: Price of "Apple" is $1.50
+
+      // // Create an object to store item names as keys and their prices as values
+      // const itemPrices = {
+      //   Apple: 1.5,
+      //   Banana: 0.75,
+      //   Orange: 1.0,
+      //   Grapes: 2.25,
+      //   Mango: 1.75,
+      // };
+
+      // // Retrieve the price of a specific item
+      // const itemToFind = "Apple";
+      // if (itemToFind in itemPrices) {
+      //   const price = itemPrices[itemToFind];
+      //   console.log(`Price of "${itemToFind}" is $${price.toFixed(2)}`);
+      // } else {
+      //   console.log(`Item "${itemToFind}" not found in the list.`);
+      // }
+
+      // // 2. Question: Given a map of student names and their scores, find the student with the highest score.
+
+      // // Input:
+
+      // // {
+      // //   "Alice": 85,
+      // //   "Bob": 92,
+      // //   "Charlie": 78,
+      // //   "David": 95
+      // // }
+      // // Expected Output: david has the highest score of 95
+      // const studentScores = {
+      //   Alice: 85,
+      //   Bob: 92,
+      //   Charlie: 78,
+      //   David: 95,
+      // };
+
+      // let highestScore = -1; // Initialize with a lower value
+      // let highestScoringStudent = "";
+
+      // for (const student in studentScores) {
+      //   const score = studentScores[student];
+      //   if (score > highestScore) {
+      //     highestScore = score;
+      //     highestScoringStudent = student;
+      //   }
+      // }
+
+      // console.log(
+      //   `${highestScoringStudent} has the highest score of ${highestScore}`
+      // );
+
+      // // 3. Question: Write a program to count the occurrences of each character in a given string using a map.
+
+      // // Input: "hello"
+
+      // // Expected Output:
+
+      // // {
+      // //   "h": 1,
+      // //   "e": 1,
+      // //   "l": 2,
+      // //   "o": 1
+      // // }
+      // function countCharacters(inputString) {
+      //   const charCountMap = new Map();
+
+      //   for (const char of inputString) {
+      //     if (charCountMap.has(char)) {
+      //       charCountMap.set(char, charCountMap.get(char) + 1);
+      //     } else {
+      //       charCountMap.set(char, 1);
+      //     }
+      //   }
+
+      //   return charCountMap;
+      // }
+
+      // const inputString = "hello";
+      // const charCountResult = countCharacters(inputString);
+
+      // console.log(charCountResult);
+
+      // // 4. Question: Create a map of words and their meanings. Allow the user to input a word and display its meaning.
+
+      // // Expected Output: Meaning of "industrious" is "hard-working and diligent"
+      // // Create a map of words and their meanings
+      // const wordMeanings = new Map([
+      //   ["industrious", "hard-working and diligent"],
+      // ]);
+
+      // // Function to retrieve and display the meaning of a word
+      // function displayWordMeaning(word) {
+      //   if (wordMeanings.has(word)) {
+      //     const meaning = wordMeanings.get(word);
+      //     console.log(`Meaning of "${word}" is "${meaning}"`);
+      //   } else {
+      //     console.log(`Word "${word}" not found in the dictionary.`);
+      //   }
+      // }
+
+      // // Prompt the user for a word
+      // const userInput = prompt("Enter a word to get its meaning:");
+
+      // // Display the meaning of the user-input word
+      // displayWordMeaning(userInput);
+
+      // // 5. Question: Given an array of numbers, create a map where the keys are the numbers and the values are their squares.
+
+      // // Input: [2, 3, 4, 5]
+
+      // // Expected Output:
+
+      // // {
+      // //   2: 4,
+      // //   3: 9,
+      // //   4: 16,
+      // //   5: 25
+      // // }
+      // // Input array of numbers
+      // const inputArray = [2, 3, 4, 5];
+
+      // // Create a map where keys are numbers and values are their squares
+      // const numberSquaresMap = new Map();
+
+      // for (const num of inputArray) {
+      //   const square = num * num;
+      //   numberSquaresMap.set(num, square);
+      // }
+
+      // console.log(numberSquaresMap);
+
+      // 6. Question: Remove duplicate values from an array using a set.
+
+      // Input: [1, 2, 3, 2, 4, 1]
+
+      // Expected Output: [1, 2, 3, 4]
+      // Input array with duplicates
+      const inputArray = [1, 2, 3, 2, 4, 1];
+
+      // Create a Set from the input array (which automatically removes duplicates)
+      const uniqueSet = new Set(inputArray);
+
+      // Convert the Set back to an array
+      const uniqueArray = Array.from(uniqueSet);
+
+      console.log(uniqueArray);
+
+      // 7. Question: Create a set of colors and then add more colors to it. Check if a specific color exists in the set.
+
+      // Expected Output: Color "blue" exists in the set.
+      // Create a Set of colors
+      const colorsSet = new Set(["red", "green", "yellow"]);
+
+      // Add more colors to the Set
+      colorsSet.add("blue");
+      colorsSet.add("purple");
+
+      // Check if a specific color exists in the Set
+      const colorToCheck = "blue";
+
+      if (colorsSet.has(colorToCheck)) {
+        console.log(`Color "${colorToCheck}" exists in the set.`);
+      } else {
+        console.log(`Color "${colorToCheck}" does not exist in the set.`);
+      }
+
+      // 8. Question: Given two sets of numbers, find the common elements between them.
+
+      // Input: Set A: {1, 2, 3, 4, 5} Set B: {3, 4, 5, 6, 7}
+
+      // Expected Output: Common elements: 3, 4, 5
+
+      // 9. Question: Write a program to determine if a given string is a pangram (contains all English letters) using a set.
+
+      // Input: "The quick brown fox jumps over the lazy dog"
+
+      // Expected Output: It is a pangram.
+
+      // 10. Question: Given a sentence, create a set of unique words in it.
+
+      // Input: "This is a sample sentence with some repeated words."
+
+      // Expected Output: {"This", "is", "a", "sample", "sentence", "with", "some", "repeated", "words"}
+    </script>
+  </body>
+</html>
