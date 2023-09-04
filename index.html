@@ -11,23 +11,23 @@
 
       // // Expected Output: Price of "Apple" is $1.50
 
-      // // Create an object to store item names as keys and their prices as values
-      // const itemPrices = {
-      //   Apple: 1.5,
-      //   Banana: 0.75,
-      //   Orange: 1.0,
-      //   Grapes: 2.25,
-      //   Mango: 1.75,
-      // };
+      // Create an object to store item names as keys and their prices as values
+      const itemPrices = {
+        Apple: 1.5,
+        Banana: 0.75,
+        Orange: 1.0,
+        Grapes: 2.25,
+        Mango: 1.75,
+      };
 
-      // // Retrieve the price of a specific item
-      // const itemToFind = "Apple";
-      // if (itemToFind in itemPrices) {
-      //   const price = itemPrices[itemToFind];
-      //   console.log(`Price of "${itemToFind}" is $${price.toFixed(2)}`);
-      // } else {
-      //   console.log(`Item "${itemToFind}" not found in the list.`);
-      // }
+      // Retrieve the price of a specific item
+      const itemToFind = "Apple";
+      if (itemToFind in itemPrices) {
+        const price = itemPrices[itemToFind];
+        console.log(`Price of "${itemToFind}" is $${price.toFixed(2)}`);
+      } else {
+        console.log(`Item "${itemToFind}" not found in the list.`);
+      }
 
       // // 2. Question: Given a map of student names and their scores, find the student with the highest score.
 
@@ -47,20 +47,20 @@
       //   David: 95,
       // };
 
-      // let highestScore = -1; // Initialize with a lower value
-      // let highestScoringStudent = "";
+      let highestScore = -1; // Initialize with a lower value
+      let highestScoringStudent = "";
 
-      // for (const student in studentScores) {
-      //   const score = studentScores[student];
-      //   if (score > highestScore) {
-      //     highestScore = score;
-      //     highestScoringStudent = student;
-      //   }
-      // }
+      for (const student in studentScores) {
+        const score = studentScores[student];
+        if (score > highestScore) {
+          highestScore = score;
+          highestScoringStudent = student;
+        }
+      }
 
-      // console.log(
-      //   `${highestScoringStudent} has the highest score of ${highestScore}`
-      // );
+      console.log(
+        `${highestScoringStudent} has the highest score of ${highestScore}`
+      );
 
       // // 3. Question: Write a program to count the occurrences of each character in a given string using a map.
 
@@ -74,48 +74,48 @@
       // //   "l": 2,
       // //   "o": 1
       // // }
-      // function countCharacters(inputString) {
-      //   const charCountMap = new Map();
+      function countCharacters(inputString) {
+        const charCountMap = new Map();
 
-      //   for (const char of inputString) {
-      //     if (charCountMap.has(char)) {
-      //       charCountMap.set(char, charCountMap.get(char) + 1);
-      //     } else {
-      //       charCountMap.set(char, 1);
-      //     }
-      //   }
+        for (const char of inputString) {
+          if (charCountMap.has(char)) {
+            charCountMap.set(char, charCountMap.get(char) + 1);
+          } else {
+            charCountMap.set(char, 1);
+          }
+        }
 
-      //   return charCountMap;
-      // }
+        return charCountMap;
+      }
 
-      // const inputString = "hello";
-      // const charCountResult = countCharacters(inputString);
+      const inputString = "hello";
+      const charCountResult = countCharacters(inputString);
 
-      // console.log(charCountResult);
+      console.log(charCountResult);
 
       // // 4. Question: Create a map of words and their meanings. Allow the user to input a word and display its meaning.
 
-      // // Expected Output: Meaning of "industrious" is "hard-working and diligent"
-      // // Create a map of words and their meanings
-      // const wordMeanings = new Map([
-      //   ["industrious", "hard-working and diligent"],
-      // ]);
+      // Expected Output: Meaning of "industrious" is "hard-working and diligent"
+      // Create a map of words and their meanings
+      const wordMeanings = new Map([
+        ["industrious", "hard-working and diligent"],
+      ]);
 
-      // // Function to retrieve and display the meaning of a word
-      // function displayWordMeaning(word) {
-      //   if (wordMeanings.has(word)) {
-      //     const meaning = wordMeanings.get(word);
-      //     console.log(`Meaning of "${word}" is "${meaning}"`);
-      //   } else {
-      //     console.log(`Word "${word}" not found in the dictionary.`);
-      //   }
-      // }
+      // Function to retrieve and display the meaning of a word
+      function displayWordMeaning(word) {
+        if (wordMeanings.has(word)) {
+          const meaning = wordMeanings.get(word);
+          console.log(`Meaning of "${word}" is "${meaning}"`);
+        } else {
+          console.log(`Word "${word}" not found in the dictionary.`);
+        }
+      }
 
-      // // Prompt the user for a word
-      // const userInput = prompt("Enter a word to get its meaning:");
+      // Prompt the user for a word
+      const userInput = prompt("Enter a word to get its meaning:");
 
-      // // Display the meaning of the user-input word
-      // displayWordMeaning(userInput);
+      // Display the meaning of the user-input word
+      displayWordMeaning(userInput);
 
       // // 5. Question: Given an array of numbers, create a map where the keys are the numbers and the values are their squares.
 
@@ -132,15 +132,15 @@
       // // Input array of numbers
       // const inputArray = [2, 3, 4, 5];
 
-      // // Create a map where keys are numbers and values are their squares
-      // const numberSquaresMap = new Map();
+      // Create a map where keys are numbers and values are their squares
+      const numberSquaresMap = new Map();
 
-      // for (const num of inputArray) {
-      //   const square = num * num;
-      //   numberSquaresMap.set(num, square);
-      // }
+      for (const num of inputArray) {
+        const square = num * num;
+        numberSquaresMap.set(num, square);
+      }
 
-      // console.log(numberSquaresMap);
+      console.log(numberSquaresMap);
 
       // 6. Question: Remove duplicate values from an array using a set.
 
@@ -183,17 +183,66 @@
 
       // Expected Output: Common elements: 3, 4, 5
 
+      // Define the two sets as arrays
+      const setA = [1, 2, 3, 4, 5];
+      const setB = [3, 4, 5, 6, 7];
+
+      // Find the common elements
+      const commonElements = setA.filter((element) => setB.includes(element));
+
+      // Print the common elements
+      console.log("Common elements:", commonElements);
+
       // 9. Question: Write a program to determine if a given string is a pangram (contains all English letters) using a set.
 
       // Input: "The quick brown fox jumps over the lazy dog"
 
       // Expected Output: It is a pangram.
+      function isPangram(str) {
+        // Create a set to store unique letters
+        const letterSet = new Set();
+
+        // Convert the string to lowercase and remove non-alphabetic characters
+        const cleanStr = str.toLowerCase().replace(/[^a-z]/g, "");
+
+        // Iterate through the clean string and add each letter to the set
+        for (const letter of cleanStr) {
+          letterSet.add(letter);
+        }
+
+        // Check if the set contains all 26 English letters
+        return letterSet.size === 26;
+      }
+
+      const inputString = "The quick brown fox jumps over the lazy dog";
+      const result = isPangram(inputString);
+
+      if (result) {
+        console.log("It is a pangram.");
+      } else {
+        console.log("It is not a pangram.");
+      }
 
       // 10. Question: Given a sentence, create a set of unique words in it.
 
       // Input: "This is a sample sentence with some repeated words."
 
       // Expected Output: {"This", "is", "a", "sample", "sentence", "with", "some", "repeated", "words"}
+      function extractUniqueWords(sentence) {
+        // Split the sentence into words
+        const words = sentence.split(/\s+/);
+
+        // Create a set to store unique words
+        const uniqueWords = new Set(words);
+
+        return uniqueWords;
+      }
+
+      const inputSentence =
+        "This is a sample sentence with some repeated words.";
+      const uniqueWordsSet = extractUniqueWords(inputSentence);
+
+      console.log(uniqueWordsSet);
     </script>
   </body>
 </html>
